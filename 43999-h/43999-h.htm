@@ -1,0 +1,877 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+
+  /*]]>*/
+  </style>
+  <title>KITTY'S PICNIC AND OTHER STORIES</title>
+</head>
+<body>
+  <div class="document" id="kitty-s-picnic-and-other-stories">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">KITTY'S PICNIC AND OTHER STORIES</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container coverpage">
+      <div class="vspace" style="height: 3em"></div>
+      <div class="align-center auto-scaled figure margin" style="width: 63%" id="figure-226">
+        <span id="cover-art"></span><img class="align-center block" style="display: block; width: 100%" alt="Cover art" src="images/img-cover.jpg" />
+        <div class="caption centerleft figure-caption margin">
+          <span class="italics">Cover art</span>
+        </div>
+      </div>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container frontispiece">
+      <div class="align-center auto-scaled figure margin" style="width: 62%" id="figure-227">
+        <img class="align-center block" style="display: block; width: 100%" alt="'KITTY SAT AT THE WINDOW.'--*Page* 7." src="images/img-front.jpg" />
+        <div class="caption centerleft figure-caption margin">
+          <span class="italics">'KITTY SAT AT THE WINDOW.'—</span><em class="italics">Page</em> <a class="italics reference internal" href="#id1">7</a><span class="italics">.</span>
+        </div>
+      </div>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-None container titlepage">
+      <p class="center pfirst"><span class="x-large">KITTY'S PICNIC</span></p>
+      <p class="center pnext"><span class="x-large">And other Stories</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><em class="italics small">WITH ILLUSTRATIONS</em></p>
+      <div class="vspace" style="height: 3em"></div>
+      <p class="center pfirst"><span class="medium">EDINBURGH &amp; LONDON<br />
+      OLIPHANT ANDERSON &amp; FERRIER</span></p>
+      <div class="vspace" style="height: 4em"></div>
+    </div>
+    <div class="align-center auto-scaled figure margin" style="width: 56%" id="figure-228">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to Contents" src="images/img-05a.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Contents</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold large">CONTENTS.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="noindent pfirst"><a class="reference internal" href="#kitty-s-picnic">Kitty's Picnic</a> <span><br /></span><a class="reference internal" href="#ellen-s-letter">Ellen's Letter</a> <span><br /></span><a class="reference internal" href="#that-dear-duck">That Dear Duck</a> <span><br /></span><a class="reference internal" href="#little-miss-muffle">Little Miss Muffle</a> <span><br /></span><a class="reference internal" href="#a-new-red-riding-hood">A New Red Riding-Hood</a> <span><br /></span><a class="reference internal" href="#lilla-s-doll-show">Lilla's Doll Show</a> <span><br /></span><a class="reference internal" href="#selina-and-her-doll">Selina and her Doll</a></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 19%" id="figure-229">
+      <img class="align-center block" style="display: block; width: 100%" alt="tailpiece to Contents" src="images/img-05b.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">tailpiece to Contents</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 55%" id="figure-230">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to Kitty's Picnic" src="images/img-07.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Kitty's Picnic</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst" id="id1"><span id="kitty-s-picnic"></span><span class="bold large">Kitty's Picnic.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>It was a fine spring morning, and Kitty sat at the window looking out at the green fields and the trees with their young leaves, and far, far beyond these to some towers that looked small in the distance, but when you came close to them you found that they belonged to a grand old castle in ruins.</span></p>
+    <p class="pnext"><span>This castle Kitty had long wished to see, for she had heard so much about it; and to-day she was thinking very much about it, for she knew that there was going to be a great picnic, to which her cousins were going, and Kitty wished she were going also, but she had not been invited. As she gazed out of the window she saw several carriages full of people on their way to the picnic. Then the tears came into Kitty's eyes, and she dropped the book she was holding in her hand, and opened the window so that she might see the carriages more clearly. They were going very quickly, and Kitty could hear the people laughing and talking as she watched them out of sight.</span></p>
+    <p class="pnext"><span>She gave a great sigh.</span></p>
+    <p class="pnext"><span>'How much I should like to go!' she said, half aloud.</span></p>
+    <p class="pnext"><span>Just then the door opened, and her Uncle George walked into the room.</span></p>
+    <p class="pnext"><span>'Why, Uncle George, where have you come from?' said Kitty, jumping up. 'I thought you were not coming home till next week.'</span></p>
+    <p class="pnext"><span>'I came home last night,' said Uncle George, 'but I did not expect to find you here. I thought you would be going to the picnic.'</span></p>
+    <p class="pnext"><span>'I should like to go,' said Kitty, 'but I was not invited. I do not know Mrs. Somers.'</span></p>
+    <p class="pnext"><span>'Neither do I,' said Uncle George; 'but suppose we have a little picnic of our own, Kitty? I have got my dog-cart at the door, and there is room in the castle grounds for a dozen picnic parties; and we should not take up much room.'</span></p>
+    <p class="pnext"><span>Kitty clapped her hands.</span></p>
+    <p class="pnext"><span>'Put on your hat, then, and we will go,' said Uncle George. 'My little Kitty shall see the castle, and climb the ruins.'</span></p>
+    <p class="pnext"><span>'Oh, Uncle George, how good you are!' said Kitty, as they drove along. 'I never thought I should be so happy as I am to-day.'</span></p>
+    <p class="pnext"><span>'But, Kitty,' said Uncle George very gravely, 'I am afraid it can't be quite a picnic, for we have brought nothing to eat with us. What shall we do?'</span></p>
+    <p class="pnext"><span>'I shan't mind,' said Kitty; 'but I am afraid that you will be hungry, Uncle George.'</span></p>
+    <p class="pnext"><span>Uncle George smiled.</span></p>
+    <p class="pnext"><span>'Well, we won't be starved, Kitty; there is a nice little country inn close by, where I put up my horse, and I daresay we shall manage to get something there.'</span></p>
+    <p class="pnext"><span>And so they did; and Kitty saw the old castle, and when she drove home she said it was the happiest day she had ever spent.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 21%" id="figure-231">
+      <img class="align-center block" style="display: block; width: 100%" alt="tailpiece to Kitty's Picnic" src="images/img-11.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">tailpiece to Kitty's Picnic</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 56%" id="figure-232">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to Ellen's Letter" src="images/img-12.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Ellen's Letter</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst" id="ellen-s-letter"><span class="bold large">Ellen's Letter.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>'You must be sure to write it all down, Jessy,' said Ellen, looking over her sister's shoulder: 'you must tell how naughty Bob was, and how he threw your doll on the fire, and all the wax melted, and that he broke my doll's arms and legs, so that I have had to sew them all over to keep the bran from running out.'</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 51%" id="figure-233">
+      <span id="you-must-be-sure-to-write-it-all-down"></span><img class="align-center block" style="display: block; width: 100%" alt="'YOU MUST BE SURE TO WRITE IT ALL DOWN.'" src="images/img-13.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">'YOU MUST BE SURE TO WRITE IT ALL DOWN.'</span>
+      </div>
+    </div>
+    <p class="pnext"><span>'Yes—and how he trampled on our gardens, and broke down my rose-bush and all my pinks. I don't think I shall have room for all the things there are to tell mamma about him. There never was such a naughty boy! When he gets one of his tempers he does not seem to know what he is doing.'</span></p>
+    <p class="pnext"><span>And Ellen leaned down on the table, and went on writing.</span></p>
+    <p class="pnext"><span>Just then the door opened, and Bob himself came in. He was a fat, rosy little boy, and he did not look very fierce now; indeed, he looked quite meek and gentle. He came up to his sisters, and said, 'Bob is sorry; he won't spoil dolls and gardens again.'</span></p>
+    <p class="pnext"><span>'Ah! it is too late now, Bob,' said Ellen; 'you have spoiled everything; and I am telling mamma all about it in my letter, so she won't bring you the baker's cart and the whip that you wanted.'</span></p>
+    <p class="pnext"><span>You are a very naughty boy, Bob,' said Jessy, 'and I am not going to play with you again.'</span></p>
+    <p class="pnext"><span>Bob went very red.</span></p>
+    <p class="pnext"><span>'Take care; he's going into a temper again,' said Ellen, as Bob made a snatch at the letter she was writing. She held it out of his reach, and then he gave a loud scream and began crying with all his might.</span></p>
+    <p class="pnext"><span>'I'll go to nurse!' he cried, rushing out of the room, shouting as loud as he could.</span></p>
+    <p class="pnext"><span>'He is the worst boy that ever lived!' said Jessy.</span></p>
+    <p class="pnext"><span>'Now we'll get on with the letter,' said Ellen.</span></p>
+    <p class="pnext"><span>But just then they heard another scream—which was not Bob—and then a bumping noise on the stairs.</span></p>
+    <p class="pnext"><span>'He's fallen down-stairs. Perhaps he's killed,' said Jessy, turning pale. And the two girls ran to see what was the matter.</span></p>
+    <p class="pnext"><span>Yes, Bob, in his passion, did not see where he was going, and he slipped, and fell from the top of the stairs to the bottom.</span></p>
+    <p class="pnext"><span>'Oh, nurse, is he much hurt?' cried Ellen, for nurse and the rest of the servants were there.</span></p>
+    <p class="pnext"><span>It was a long time before Bob came to himself.</span></p>
+    <p class="pnext"><span>The doctor was sent for, and he found that Bob's arm was broken; and poor Bob had to suffer a great deal of pain in having it set.</span></p>
+    <p class="pnext"><span>'Poor Bob!' said Ellen to Jessy; 'we won't send our letter to mamma.'</span></p>
+    <p class="pnext"><span>'No,' said Jessy; 'it will be a great trouble to mamma to find poor Bob so ill. We will not give her any more trouble.' And she tore up the letter.</span></p>
+    <p class="pnext"><span>But another letter was written to mamma to tell her what had happened, and she came at once.</span></p>
+    <p class="pnext"><span>Bob was lying quite still, muttering something to himself, but only loud enough for Ellen and Jessy to hear the word 'Naughty, naughty.'</span></p>
+    <p class="pnext"><span>'But we did not think you would fall down-stairs, Bob,' said Jessy.</span></p>
+    <p class="pnext"><span>Bob looked up at Jessy, and said, 'No, no; naughty Bob, not naughty Jessy.'</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 21%" id="figure-234">
+      <img class="align-center block" style="display: block; width: 100%" alt="tailpiece to Ellen's Letter" src="images/img-17.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">tailpiece to Ellen's Letter</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 57%" id="figure-235">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to That Dear Duck" src="images/img-18a.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to That Dear Duck</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst" id="that-dear-duck"><span class="bold large">That Dear Duck.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><img class="dropcap inline" style="height: 6.00em" alt="'Y" src="images/img-18b.jpg" /><span>es,' said Farmer Jones, looking down at them over the top bar of the gate, 'you may come and play in the field for a bit; only mind, there is to be no chasing the sheep or hens, or throwing stones at the ducks, or it will be the last time you children get leave to come into my fields.'</span></p>
+    <p class="pnext"><span>'We won't do any mischief, sir,' said Peggy earnestly, as she tried to make the bundle she carried sit upright, and look something like a baby, instead of cuddling up like a shapeless lump on her shoulder.</span></p>
+    <p class="pnext"><span>'Very well, then, in you go.'</span></p>
+    <p class="pnext"><span>The farmer held the gate open till the five children and two babies had filed sedately through; then he dropped the bar into the socket, and tramped away down the dusty lane.</span></p>
+    <p class="pnext"><span>The sheep were away at the far side, and did not take the trouble to glance up at the intruders. The hens were clucking busily on a piece of bare ground beyond the barn. Down in the lowest corner of the field was a shallow pond, where a plump mother duck and half a dozen downy ducklings were sailing placidly about. They were new-comers comparatively, and the children greeted them with shouts of approval.</span></p>
+    <p class="pnext"><span>'Why can't babies swim about and do things, instead of always crying and going to sleep?' asked Tommy, eyeing his small twin brothers with great dissatisfaction, as they sat in a row on a fallen tree-trunk. 'I'd rather have young ducks any day; they've twice as much sense.'</span></p>
+    <p class="pnext"><span>'See that one eating up my bread and butter!' cried Jack; 'he's something like a duck. I wish Farmer Jones would give him to me.'</span></p>
+    <p class="pnext"><span>'I'm quite sure he wouldn't,' said Peggy sharply; 'ducks are dreadfully dear things: mother's said so lots of times.'</span></p>
+    <p class="pnext"><span>Jack didn't answer; he was leaning over the tree trunk, throwing tiny bits of crusts to the duckling, who was doing his best to choke himself with them. Soon after, the duckling came round in front of the trunk where they were sitting; and it was the funniest little object, with its stumpy wings, and a big yellow bill that opened and shut like a pair of scissors.</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 57%" id="figure-236">
+      <img class="align-center block" style="display: block; width: 100%" alt="'IT WAS THE FUNNIEST LITTLE OBJECT.'" src="images/img-22.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">'IT WAS THE FUNNIEST LITTLE OBJECT.'</span>
+      </div>
+    </div>
+    <p class="pnext"><span>There were five more swimming about beside their mother; there might be dozens more in the farmyard, while they had nothing of their own. A sharp little duck like that would be as good as a dog to play with. Jack had watched it with longing eyes; he was certain the farmer would never miss it, if he were to take it home for a little while—only a little while; he could easily bring it back again, and it wouldn't be one bit the worse.</span></p>
+    <p class="pnext"><span>The others played on with the daisies and the butterflies; the babies sucked their thumbs and fell asleep in their small nurses' arms; the little duck forgot his mother and his brothers and sisters, and strayed farther and farther away after the crumbs, till presently two small brown hands pounced down, and he found himself a prisoner.</span></p>
+    <p class="pnext"><span>'Quack! quack!' called the mother duck, missing the wanderer.</span></p>
+    <p class="pnext"><span>'Quack! quack!' cried the little duck.</span></p>
+    <p class="pnext"><span>Peggy and Bessy looked round.</span></p>
+    <p class="pnext"><span>'Why, what are you doing, Jack? Didn't Farmer Jones say you weren't to tease the ducks?'</span></p>
+    <p class="pnext"><span>'Who is teasing the ducks?' demanded Jack, in a tone of injured innocence. 'I'm going to take it home for a bit, and teach it a lot of tricks.'</span></p>
+    <p class="pnext"><span>'You'd better leave it alone!' cried Peggy, in alarm; 'it would be stealing.'</span></p>
+    <p class="pnext"><span>'It would be nothing of the kind. I'm not going to keep the duck. Girls haven't a bit of sense; they're just made to go telling tales.'</span></p>
+    <p class="pnext"><span>'I don't ever tell tales,' returned Peggy, with dignity. 'Did I ever tell who it was left the gate open when the pigs got in that day?'</span></p>
+    <p class="pnext"><span>'Well, don't tell tales this time either,' was Jack's only acknowledgment. 'We'd better be going now, before anybody comes.'</span></p>
+    <p class="pnext"><span>Jack was the biggest boy, and liked his own way. Moreover, he generally made the rest like it too. Peggy and Bessy uneasily got up from their seat, and back the procession went across the green grass and daisies, Jack carrying the duck inside his jacket, where it quacked loudly, and made the company look round anxiously, for fear of stray listeners.</span></p>
+    <p class="pnext"><span>'What will mother say when she sees it?' suggested Tommy, as they slunk along the lane.</span></p>
+    <p class="pnext"><span>'Mother is not going to see it,' returned Jack; 'it's going into the wood-shed. I'll make it a nice house there, all to itself—better than it had at the farm by a long way.'</span></p>
+    <p class="pnext"><span>So instead of going straight into the house, the party repaired to the wood-shed at the end of the garden, where the duck was carefully fenced in behind some boards, and supplied with the remainder of the crusts for supper.</span></p>
+    <p class="pnext"><span>'He'll go off to sleep in a bit,' said Jack, with a sigh of relief. 'Now we'll go in; and mind, you're not to say anything about it.'</span></p>
+    <p class="pnext"><span>It was easy for Jack to say that, but it wasn't by any means so easy to do it. Every minute or two somebody would begin to say something bearing upon the subject, and break off short in sudden alarm. Every time there was a moment's silence, they would be listening for faint quacks from the wood-shed, and somehow it befell that there came no further opportunity of visiting the prisoner that evening; for it was Saturday,—the great festival of the bath-tub,—and by the time the whole seven had gone through the performance, it was too late for anything but bed.</span></p>
+    <p class="pnext"><span>Never mind; to-morrow would be Sunday, and Jack promised himself a lovely time with his dear cluck. He would slip a piece of bread into his pocket at breakfast; there was a noble ditch not very far off, where nobody ever went, and he would take it there for a swim. Jack took a last look through the curtainless window at the shed roof, and went to bed brimful of plans for to-morrow and the duck.</span></p>
+    <p class="pnext"><span>Ah, if that duck had but known or understood the joys that lay before him! But he didn't; he was only a poor solitary baby duck, taken away from his mother and his home, and left all alone in a cold, strange place, and the night was very long and very bleak, and his little body ached with cold and hunger, and he quacked and quacked till his throat grew sore, and the quacks wouldn't come any longer, and at last, just as it was beginning to grow grey morning, he feebly curled up his yellow toes, and rolled over on his back—and died!</span></p>
+    <p class="pnext"><span>'Tommy, come down the garden, and mind nobody sees you,' whispered Jack, after breakfast. 'We'll take that duck to the ditch, and have some fun. Hurry up!'</span></p>
+    <p class="pnext"><span>The two raced down to the wood-shed; all was quiet enough inside. Jack looked round in some astonishment. 'He must be fast asleep yet; I thought he'd have been quacking like anything for some food.'</span></p>
+    <p class="pnext"><span>Tommy was peering into the corner. He got up suddenly with a startled face.</span></p>
+    <p class="pnext"><span>'Jack,' he said solemnly, 'I do believe he's gone and died! See how he's lying.'</span></p>
+    <p class="pnext"><span>Jack had him up in his arms in an instant. He did not know much about dead ducks, but the first touch of the little body, that had been so soft and warm the night before, sent a cold chill right through him. He looked down at it for a minute in speechless dismay, and then he burst out into a perfect storm of sobs.</span></p>
+    <p class="pnext"><span>'Let's go and tell mother,' said Tommy, beginning to cry too; and off they went.</span></p>
+    <p class="pnext"><span>But even mother could not bring the little duck back to life. She quietly put it into a basket, and told Jack to take it up to Farmer Jones, and tell him all about his wrong-doing.</span></p>
+    <p class="pnext"><span>Tommy went with him for company, and the pair felt exactly as if they were going to a funeral; and certainly no funeral they had ever seen went half so slowly, and with so many halts and pauses. Sooner or later, however, they</span> <em class="italics">had</em> <span>to get there, and Jack had to falter out his confession as best he might.</span></p>
+    <p class="pnext"><span>'It was because it was such a dear little duck that Jack wanted it,' explained Tommy valiantly, when Jack got to the end. 'We didn't mean to hurt it.'</span></p>
+    <p class="pnext"><span>The farmer listened in grim silence. 'Perhaps not,' he said; 'but I can't have you in my fields again: you'll have to be content with the lane for the rest of the summer, so I'm thinking you'll find it's been a dear duck for you more ways than one.'</span></p>
+    <p class="pnext"><span>'Mother was quite right,' said Jack, as they trudged back down that dusty lane; 'ducks</span> <em class="italics">are</em> <span>dreadfully dear things!'</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 23%" id="figure-237">
+      <img class="align-center block" style="display: block; width: 100%" alt="tailpiece to That Dear Duck" src="images/img-31.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">tailpiece to That Dear Duck</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 54%" id="figure-238">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to Little Miss Muffle" src="images/img-32.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Little Miss Muffle</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="little-miss-muffle"><span class="bold large">Little Miss Muffle.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Little Miss Muffle was sitting waiting. She had on her new winter coat and her new winter bonnet, and she sat as still as a mouse.</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 55%" id="figure-239">
+      <img class="align-center block" style="display: block; width: 100%" alt="'LITTLE MISS MUFFLE WAS SITTING WAITING.'" src="images/img-33.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">'LITTLE MISS MUFFLE WAS SITTING WAITING.'</span>
+      </div>
+      <div class="legend margin">
+        <div class="line-block outermost">
+          <div class="line">
+            <span>'Why is little Miss Muffle so gay,</span>
+          </div>
+          <div class="line">
+            <span>In her winter coat and bonnet to-day?</span>
+          </div>
+          <div class="line">
+            <span>Because she is going with mother away</span>
+          </div>
+          <div class="line">
+            <span>For a drive in a carriage and pair,'</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="pnext"><span>said Uncle George, coming into the room. He always called his niece Miss Muffle, though her real name was Annette.</span></p>
+    <p class="pnext"><span>'Yes,' said Miss Muffle, 'I am going with my mother, and I shall not be a bit cold. I am never cold in the winter; my mother keeps me so warm.'</span></p>
+    <p class="pnext"><span>'Yes,' said Uncle George; 'your father and mother are rich, and can give their little girl all she wants. I wonder if Miss Muffle would like to go and see some little girls who have no warm coats or shoes and stockings?'</span></p>
+    <p class="pnext"><span>Miss Muffle looked up at Uncle George.</span></p>
+    <p class="pnext"><span>'I should like to see those little girls, Uncle George. Will you take me to see them?'</span></p>
+    <p class="pnext"><span>So Uncle George went in the carriage with Miss Muffle and her mother. And as they were driving along he told the coachman to stop at some poor cottages near the road. He lifted Miss Muffle out of the carriage, and told her mother they would not be long, if she would not mind waiting. Uncle George knocked at the door of the first cottage.</span></p>
+    <p class="pnext"><span>Miss Muffle gave a little shiver, for there was no fire, and sitting close together on the floor were three little children, trying to get warm under an old shawl of their mother's.</span></p>
+    <p class="pnext"><span>'And how are the children getting on at school?' said Uncle George.</span></p>
+    <p class="pnext"><span>'Only Ben has gone,' said the mother, 'for the others have on shoes, except a pair of slippers that they wear in turn on fine days, but such weather as this they would be wet through at once.'</span></p>
+    <p class="pnext"><span>'Have they had their dinner?' asked Uncle George.</span></p>
+    <p class="pnext"><span>'They have each had a piece of dry bread; that is all I can give them, for the father is out of work.'</span></p>
+    <p class="pnext"><span>The tears were in Miss Muffle's eyes.</span></p>
+    <p class="pnext"><span>Uncle George slipped out of the door, and presently came back with a great basket, which he opened, and gave each of the children a large sandwich, at sight of which their eyes gleamed with joy. How hungry they were!</span></p>
+    <p class="pnext"><span>'And you must get some coal at once, Mrs. Trotter,' said Uncle George, putting some money on the table, and at the same time taking out of the basket tea, sugar, bread, cheese, bacon, and all sorts of food. 'And you must have a good meal for your husband and the children, and we will see about shoes and stockings in a day or two.'</span></p>
+    <p class="pnext"><span>'Uncle George,' said Miss Muffle, when they returned to the carriage, 'I will give them all the money I have, and father and mother will give some, and we will buy clothes and shoes and stockings for the poor little children.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 21%" id="figure-240">
+      <img class="align-center block" style="display: block; width: 100%" alt="tailpiece to Little Miss Muffle" src="images/img-37.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">tailpiece to Little Miss Muffle</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 54%" id="figure-241">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to A New Red Riding-hood" src="images/img-38.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to A New Red Riding-hood</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="a-new-red-riding-hood"><span class="bold large">A New Red Riding-hood.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>'Now, Miss Sibyl, why did you go and tell that "Red Riding-hood" to Baby? You know it always makes him cry, the soft-hearted darling!'</span></p>
+    <p class="pnext"><span>'Well, he ought to learn not to be so silly. I won't amuse the little ones again, nurse, if you want me to spoil them!' said Sibyl, with dignity.</span></p>
+    <p class="pnext"><span>'I do think you might make the story end nicely, any way,' grumbled nurse, hushing Baby, who was crying lustily.</span></p>
+    <p class="pnext"><span>'I can't make it end well, nurse. It would not be true to say she was saved, because she wasn't—she was</span> <em class="italics">eaten</em><span>!'</span></p>
+    <p class="pnext"><span>This was Sibyl's parting shot as she ran out of the nursery.</span></p>
+    <p class="pnext"><span>'Never you mind what she says, my lambie; there are no wolves here at all, and Red Riding-hood was not killed. There, stop crying, my beauty, and you shall come and help me sort the linen in the next room. No, not you, Miss Jean; one is enough to worrit; you just stay here till tea-time, like a good girl.'</span></p>
+    <p class="pnext"><span>So nurse went away with Baby, leaving little seven-year-old Jean alone in the great nursery.</span></p>
+    <p class="pnext"><span>The gas was not yet lit, and the familiar room looked strange and mysterious in the dim, uncertain light of the fire. The corners were shrouded in gloom, and the dancing flames threw huge, flickering shadows upon the walls.</span></p>
+    <p class="pnext"><span>Jean drew her stool nearer the fire and shivered, but not with cold. She was a very nervous child, with a horror of the dark. She could not explain, even to herself, exactly what it was she feared; it was a kind of nameless something, but the form it sometimes took was 'wolves.' She knew there were no wolves in this country, she knew there was nothing to hurt her—yet she was afraid. The child was often laughed at, and was much ashamed of her fears, and no one knew what she suffered at times.</span></p>
+    <p class="pnext"><span>Oh, the fright that story of Red Riding-hood gave her! In vain she tried to think of something else; it came back again and again, and she shivered with sympathetic terror as she pictured to herself Red Riding-hood's walk through the wood, and the horror she must have felt when her grandmother turned out to be a wolf! Half of her knew that it was only a fairy tale, and all nonsense, but the other half argued that Sibyl said it was true, and Sibyl always spoke the truth. Nurse said it was not true, but then she only said that to soothe Baby.</span></p>
+    <p class="pnext"><span>So poor little Jean sat quaking with fear, starting at every sound, fancying that she saw things move, and feeling that she must look behind her, and yet dared not.</span></p>
+    <p class="pnext"><span>But at last tea was brought in; nurse and Baby returned, the gas was lit, and Jean forgot her fears, for a time, in bread and jam.</span></p>
+    <p class="pnext"><span>The next day was Christmas Eve, and there was a great deal of fun going on at the Vicarage. The Merivals were a large family, and every one had secrets from every one else, and wonderful plans for the morrow. Mr. Merival always gave a packet of tea and sugar to some of the old women in the village on Christmas Eve, and all of these had been to the Vicarage that morning to fetch it, except one. She was a poor old body, who lived about a mile away, at the end of a wood, and was often too ill with rheumatism to venture out of doors.</span></p>
+    <p class="pnext"><span>'Sibyl,' said Mr. Merival, meeting her in the hall as he went to put on his greatcoat,—'Sibyl, I want you to take Grannie Dawson her tea this afternoon. Take it before dark.'</span></p>
+    <p class="pnext"><span>'All right, father; I'll do it when'—and Sibyl's voice was lost in the distance as she bounded out of doors.</span></p>
+    <p class="pnext"><span>'Little giddy-pate!' ejaculated her father; then, turning to Jean, he said,—</span></p>
+    <p class="pnext"><span>'See that some one takes that tea to poor old Grannie, little one. I would not have her feel neglected for anything.'</span></p>
+    <p class="pnext"><span>So saying, he departed, leaving the little girl in the hall.</span></p>
+    <p class="pnext"><span>Jean waited long and patiently, but no one came. Every one was either busy or not to be found. Mother and the elder girls were decorating the church, the maids were busy, and Sibyl and the three boys were off on some important business of their own.</span></p>
+    <p class="pnext"><span>As time went on, Jean became more and more convinced that, as usual, thoughtless Sibyl had forgotten everything but what she was doing at that moment. It was past three, it would soon be dark, and Grannie Dawson's tea—what was to be done? Father would be vexed with Sibyl if she forgot to take it, and no one would like merry Sibyl to be in disgrace on Christmas Eve. Could she go herself? Oh no; father never meant</span> <em class="italics">her</em> <span>to go. Besides, it was getting dark, and the way was through a wood. Wolves! Horrible thought! And yet poor old Grannie Dawson was so ill, so lonely.</span></p>
+    <p class="pnext"><span>'Sibyl! Sibyl!'</span></p>
+    <p class="pnext"><span>No answer.</span></p>
+    <p class="pnext"><span>Little Jean sat some time longer struggling with herself. Then she started up, slipped on her little warm red cloak, and, taking the basket with the tea and sugar, walked resolutely out of the house, down the garden, and along the road.</span></p>
+    <p class="pnext"><span>The weather was cold—not real nice Christmas cold, but damp and raw, and the roads were wet and sloppy with half-melted snow.</span></p>
+    <p class="pnext"><span>Jean's heart beat fast, and she drew her cloak tightly round her as she neared the wood. The sky was overcast, and the wind blew in fitful gusts in her face, and sobbed and sighed in the pine trees on either side. It really was very dark in the wood. The waving branches made the shadows move in a weird manner, and there was no saying what evil beast might not lurk behind those misty bushes, ready to pounce out on the unwary passer-by.</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 57%" id="figure-242">
+      <img class="align-center block" style="display: block; width: 100%" alt="'SHE DREW HER CLOAK TIGHTLY ROUND HER.'" src="images/img-46.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">'SHE DREW HER CLOAK TIGHTLY ROUND HER.'</span>
+      </div>
+    </div>
+    <p class="pnext"><span>The child thought many times of turning back, but then she remembered the poor old woman, and pressed on. Her teeth chattered, and she grasped her basket convulsively, glancing on either side with wide-open, terrified eyes. Oh, why had she come? Surely that was a wolf's howl—and behind her, so that she could not turn back!</span></p>
+    <p class="pnext"><span>Very quietly she crept along till she came in sight of the little thatched cottage where Grannie lived. Then she gathered herself together, ready to set off running.</span></p>
+    <p class="pnext"><span>But what was that noise?—it was not fancy. That huge form bounding towards her—a wolf!</span></p>
+    <p class="pnext"><span>With a wild scream of terror, little Jean fled towards the cottage, the wolf after her. Nearer and nearer it came, but fear lent wings to the child's feet, and she just reached the door in time to burst in and slam it in the wolf's face. Then she threw herself on the floor and burst into a fit of frightened crying.</span></p>
+    <p class="pnext"><span>'Oh, the wolf! the wolf!' she sobbed, as old Grannie tried to soothe her. 'Listen, it is at the door.'</span></p>
+    <p class="pnext"><span>And sure enough the old woman heard it whining and scratching outside, and then came the sound of a man's voice.</span></p>
+    <p class="pnext"><span>Leaving Jean in the next room, Grannie Dawson opened the door, and in walked—Farmer Martin and his big collie! So big and shaggy was that collie-dog, and yet so very quiet and gentle, that no child, even timid little Jean, could be afraid of him. The Merivals knew him well, and used often to pet and tease him when they went to the farm to see Mrs. Martin, and the farmer had now called at Grannie Dawson's cottage to ask whose child it was who seemed so afraid of his dog.</span></p>
+    <p class="pnext"><span>So the wolf was only dear old Cheviot, who had recognised Jean, and wanted to be patted. Oh, how relieved she was, and how much ashamed of herself!</span></p>
+    <p class="pnext"><span>When Jean had recovered herself a little, kind Farmer Martin carried her home in his arms, Cheviot trotting on before, wagging his tail and looking over his shoulder at her, as if to apologise for frightening her so.</span></p>
+    <p class="pnext"><span>It was quite dark when they reached the Vicarage, and some of the family had come home, and were wondering where Jean could be. The farmer told her story, and, to her surprise, she was petted and made much of by all.</span></p>
+    <p class="pnext"><span>But she had had a serious fright; her nerves were shaken, and she was not at all well for some days. The Merival children began to see that what they had laughed at as 'Jean's nonsense' was very real to her. They left off teasing and laughing at her, and encouraged her instead, for each of them wondered, in their heart of hearts, if they themselves could have shown such true courage as little Jean showed when she did what she was so much afraid of because she thought it right.</span></p>
+    <p class="pnext"><span>Jean was always nervous, but she left off being afraid of 'wolves,' for each time she heard her new pet name of Red Riding-hood she remembered what that terrible wolf had turned out to be.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 31%" id="figure-243">
+      <img class="align-center block" style="display: block; width: 100%" alt="tailpiece to A New Red Riding-hood" src="images/img-51.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">tailpiece to A New Red Riding-hood</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 55%" id="figure-244">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to Lilla's Doll Show" src="images/img-52.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Lilla's Doll Show</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="lilla-s-doll-show"><span class="bold large">Lilla's Doll Show.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>Lilla had more dolls than she knew what to do with.</span></p>
+    <p class="pnext"><span>Some were sitting in chairs, some lying in cradles, and one was seated in a perambulator.</span></p>
+    <p class="pnext"><span>'I have more dolls than any other little girl has,' said she, as she held three in her arms. 'I have been counting them, and I have fifteen large dolls, and ten small ones, and twelve very small ones, and then there are the little china dolls in the bath and in the china cradles. To think of one little girl having so many dolls, mother! Sometimes I think I have too many. And there is no one but myself to play with them. I wish I knew what to do with them all.'</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 53%" id="figure-245">
+      <img class="align-center block" style="display: block; width: 100%" alt="'SHE HELD THREE IN HER ARMS.'" src="images/img-53.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">'SHE HELD THREE IN HER ARMS.'</span>
+      </div>
+    </div>
+    <p class="pnext"><span>Mrs. Lee stroked Lilla's curly hair.</span></p>
+    <p class="pnext"><span>'Well, said Mrs. Lee, 'there are some very good little girls at the school in the village, and I am sure it would be a great treat to them to see all your dolls. And I want to give them a treat, so I will ask them to come here, and you shall arrange all your dolls and playthings in the nursery for them to look at. Don't you think that will be a very good plan?'</span></p>
+    <p class="pnext"><span>Lilla clapped her hands.</span></p>
+    <p class="pnext"><span>'Oh, how very nice that would be!'</span></p>
+    <p class="pnext"><span>And she and her mother dressed the dolls in their best clothes, and placed them all round the nursery.</span></p>
+    <p class="pnext"><span>'How pretty they look!' said Lilla; 'I think the little girls will like them. And may I give them some dolls to take home?'</span></p>
+    <p class="pnext"><span>'You may do as you please,' said Mrs. Lee, 'for they are your own dolls.'</span></p>
+    <p class="pnext"><span>So the little girls came—six of them; and they all said, 'Oh!'</span></p>
+    <p class="pnext"><span>'What a lot of dolls!' said one little girl; 'more dolls than there are at the shop.'</span></p>
+    <p class="pnext"><span>After the show Mrs. Lee gave the children some tea and plumcake; and then Lilla handed each of them a doll.</span></p>
+    <p class="pnext"><span>How pleased were the six little girls when they found they were each to have a doll! And all of them said that Miss Lilla's doll show was the best treat they had ever had.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 55%" id="figure-246">
+      <img class="align-center block" style="display: block; width: 100%" alt="headpiece to Selina and her Doll." src="images/img-56.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">headpiece to Selina and her Doll.</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst" id="selina-and-her-doll"><span class="bold large">Selina and her Doll.</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="pfirst"><span>'I should like to have a large wax doll of my own,' said Selina; 'large enough for me to make clothes for, with buttons and strings, to fasten and unfasten: I should play with it all day, and undress it at night, and put it in a cradle. It should have eyes to open and shut, and I should shut them at night, and then it would seem to be asleep. How nice it would be!'</span></p>
+    <p class="pnext"><span>Selina was sitting in the garden talking to herself, and did not think that any one heard her; but her mother had come into the garden and heard what her little girl was saying.</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 58%" id="figure-247">
+      <img class="align-center block" style="display: block; width: 100%" alt="'SELINA WAS SITTING IN THE GARDEN.'" src="images/img-57.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">'SELINA WAS SITTING IN THE GARDEN.'</span>
+      </div>
+    </div>
+    <p class="pnext"><span>'You have two or three dolls, Selina,' said she.</span></p>
+    <p class="pnext"><span>'Yes, mother, but they are small ones, and I want a very large one. And my dolls have brown hair and black eyes, and I want a doll with blue eyes and light hair, and one that can open and shut its eyes, like Cousin Bella's.'</span></p>
+    <p class="pnext"><span>And Selina looked up at her mother.</span></p>
+    <p class="pnext"><span>'Mother, will you buy one for me?'</span></p>
+    <p class="pnext"><span>'I am afraid that I cannot buy one for you. I have not so much money as your Aunt Sarah has to spend upon dolls and playthings.'</span></p>
+    <p class="pnext"><span>Selina was silent for a moment, then she said,—</span></p>
+    <p class="pnext"><span>'Yes, I know that. Mother, I do not care about the large doll. I will make some new clothes for my small ones, and try to think that they are large.'</span></p>
+    <p class="pnext"><span>'That is a good child,' said her mother; 'and perhaps some day I shall be able to get a larger one for you.'</span></p>
+    <p class="pnext"><span>So Selina tried to think no more of her Cousin Bella's large doll, and her mother gave her a piece of muslin to make a frock for one of her own dolls, and some blue ribbon for a sash.</span></p>
+    <p class="pnext"><span>Selina sewed away merrily, and she and her mother talked over a letter that had come from her father, who was in France, and who said he hoped to be home again in a day or two.</span></p>
+    <p class="pnext"><span>'And tell Selina that I have got a box for her, with a present inside.'</span></p>
+    <p class="pnext"><span>'I wonder what it is?' said Selina.</span></p>
+    <p class="pnext"><span>She had not long to wait, for two days after they had had the letter, her father came. They were very glad to see him, and he was very glad to see them. And for a little time Selina forgot all he had said about a present. But her father said,—-</span></p>
+    <p class="pnext"><span>'Well, Selina, you have not asked about your present.'</span></p>
+    <p class="pnext"><span>'Oh dear no! I had quite forgotten,' said Selina. 'What is it?'</span></p>
+    <p class="pnext"><span>'That you must find out,' said her father.</span></p>
+    <p class="pnext"><span>So Selina had the box opened.</span></p>
+    <p class="pnext"><span>'Oh, mother, mother! look, look! It is the most beautiful doll I have ever seen—more beautiful than Cousin Bella's, and it has light hair and blue eyes, and is as large as a baby.'</span></p>
+    <p class="pnext"><span>'I bought it in Paris,' said her father. 'They make very wonderful dolls there—dolls that can speak; and this doll that I have bought for my little Selina can say "Mamma" and "Papa."'</span></p>
+    <p class="pnext"><span>How pleased was Selina with her doll! Her father showed her how to press the doll to make it speak, and all Selina's little friends came to see the wonderful French doll that could say 'Mamma' and 'Papa.'</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <div class="align-center auto-scaled figure margin" style="width: 22%" id="figure-248">
+      <img class="align-center block" style="display: block; width: 100%" alt="tailpiece to Selina and her Doll" src="images/img-61.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">tailpiece to Selina and her Doll</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><em class="italics small">A NEW BOOK FOR GIRLS</em></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold x-large">MOLLY</span></p>
+    <p class="center pnext"><span class="bold large">A. C. HERTFORD</span></p>
+    <p class="center pnext"><span class="small">EDINBURGH &amp; LONDON<br />
+    OLIPHANT ANDERSON &amp; FERRIER</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 59%" id="figure-249">
+      <img class="align-center block" style="display: block; width: 100%" alt="Molly" src="images/img-63.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Molly</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><em class="italics small">A NEW BOOK FOR GIRLS AND BOYS</em></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="bold x-large">COMRADES TRUE</span></p>
+    <p class="center pnext"><span class="bold large">By<br />
+    ELLINOR DAVENPORT ADAMS</span></p>
+    <p class="center pnext"><span class="bold small">ILLUSTRATIONS BY EDITH SCANNELL</span></p>
+    <p class="center pnext"><span class="small">EDINBURGH &amp; LONDON<br />
+    OLIPHANT ANDERSON &amp; FERRIER</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 58%" id="figure-250">
+      <img class="align-center block" style="display: block; width: 100%" alt="Comrades True" src="images/img-64.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Comrades True</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="bold large">LIST OF BOOKS IN THIS SERIES</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="noindent pfirst"><span>Adventures of King Clo<br />
+    A Princess in Disguise<br />
+    A Stranger in the Tea<br />
+    The King's Counsellor<br />
+    Poor Cock Robin<br />
+    Nellie at the Cave<br />
+    The House that Jack Built<br />
+    Fighting a Goose, and other Stories<br />
+    Kitty's Picnic<br />
+    Charley's Pussies<br />
+    The Girl without Shoes<br />
+    Aillie's Prayer<br />
+    The Rescue<br />
+    The Lieutenant's Daughters<br />
+    The German Pastor<br />
+    Dick Ennis<br />
+    How to be Beautiful<br />
+    Little Henry<br />
+    The Little Woodman<br />
+    Clive's Conquest<br />
+    Daring Dot<br />
+    Minnie Fenian's Wrong-doing<br />
+    Fanny Garden<br />
+    Henry and Eliza<br />
+    Sing a Song of Sixpence<br />
+    Mary, Mary, quite Contrary<br />
+    Where the Sky Falls<br />
+    The Highland Chairman<br />
+    Little Patience<br />
+    Mary Grant<br />
+    Mary and Archie Graham<br />
+    The Military Blacksmith<br />
+    Fanny's Old Frock<br />
+    The First Christmas Tree</span></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span>EDINBURGH &amp; LONDON<br />
+    OLIPHANT ANDERSON &amp; FERRIER<br /></span> <em class="italics">And all Booksellers</em></p>
+    <div class="vspace" style="height: 2em"></div>
+    <p class="center pfirst"><span class="small">MORRISON AND GIBB, PRINTERS, EDINBURGH</span></p>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
